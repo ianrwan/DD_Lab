@@ -1,4 +1,4 @@
-module(a, b, cin, sum, cout);
+module full_data_flow_description(a, b, cin, sum, cout);
 input a, b, cin;
 output sum, cout;
 
