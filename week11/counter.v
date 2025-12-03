@@ -7,7 +7,7 @@ module counter(
 );
 
 // synchronous counter
-always @(posedge clk) 
+always @(posedge clk or negedge rst) 
 begin
     if (!rst) 
     begin
@@ -28,11 +28,11 @@ begin
             count <= count - 4'b0001;
         end
     end
-    else
-    begin
-        // 如果 enable == 0，當前計數值不變
-        count <= count;
-    end
+    // else
+    // begin
+    //     // 如果 enable == 0，當前計數值不變
+    //     count <= count;
+    // end
 end
 
 endmodule

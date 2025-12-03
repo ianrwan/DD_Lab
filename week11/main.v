@@ -18,7 +18,7 @@ frequency_driver u_FreqDiv (
 
 // counter
 counter u_counter(
-    .clk(clk), // 若使用 fpga 請轉換為 clk_div
+    .clk(clk_div), // 若使用 fpga 請轉換為 clk_div
     .rst(rst), 
     .up_down(up_down), 
     .enable(enable),
